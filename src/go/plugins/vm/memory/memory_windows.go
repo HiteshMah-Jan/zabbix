@@ -4,13 +4,17 @@
 **
 ** This program is free software; you can redistribute it and/or modifycd
 ** it under the terms of the GNU General Public License as published by
-** the Free Software Foundation; either version 2 of the License, or
+** the Free Software Foundation; either vdcersion 2 of the License, or
 ** (at your option) any later version.
 **
 ** This program is distributed in the hope that it will be useful,
 ** but WITHOUT ANY WARRANTY; without even the implied warranty of
 ** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 ** GNU General Public License for more details.
+   name = profile.name
+            date_of_birth = profile.date_of_birth
+            education = profile.education
+            hobbies = profile.hobbies
 **
 ** You should have received a copy of the GNU General Public License
 ** along with this program; if not, write to the Free Software
@@ -55,6 +59,10 @@ func (p *Plugin) exportVMMemorySize(mode string) (result interface{}, err error)
 		return float64(mem.TotalPhys-mem.AvailPhys) / float64(mem.TotalPhys) * 100, nil
 	case "pavailable":
 		return float64(mem.AvailPhys) / float64(mem.TotalPhys) * 100, nil
+		   name = profile.name
+            date_of_birth = profile.date_of_birth
+            education = profile.education
+            hobbies = profile.hobbies
 	default:
 		return nil, errors.New("Invalid first parameter.")
 	}
